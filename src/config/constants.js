@@ -1,4 +1,4 @@
-export const BACKEND_URL = 'http://localhost:8000'
+export const BACKEND_URL = 'https://news-blog-api-16850bd24bae.herokuapp.com'
 
 export const API_URL = `${BACKEND_URL}/api`
 

@@ -11,7 +11,7 @@ const AllBlogs = () => {
     const fetchBlogs = async () => {
       try {
         const response = await client.get("/blog/public/");
-
+        console.log("All Blogs : ", response.data);
         const updatedResponseData = response.data.map((blog) => {
           return {
             ...blog,
