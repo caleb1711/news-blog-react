@@ -1,0 +1,870 @@
+
+.menu ul {
+    padding-left: 0px;
+}
+
+.list_detail_flex {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 38px;
+    padding-bottom: 61px;
+    gap: 20px;
+}
+.nav-item {
+    padding-top: 10px !important;
+}
+.list_detail {
+    max-width: 820px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 13px 11px 33px 28px;
+    width: 100%;
+}
+
+.list_detail_reviews {
+    max-width: 400px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 24px 17px 33px 11px;
+    width: 100%;
+}
+
+.detail {
+    padding-bottom: 32px;
+}
+
+.detail h2 {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    padding-bottom: 40px;
+}
+
+.listing_thumb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listing_thumb img {
+    height: 20px;
+}
+
+.list_locaations {
+    display: flex;
+    padding-bottom: 23px;
+}
+
+.list_locaations p {
+    padding-left: 10px;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #535461;
+}
+
+.call_now {
+    padding-left: 24px;
+}
+
+.call_now a,
+.schedule_booking a {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2C6DEB;
+}
+
+.schedule_booking {
+    max-width: 199px;
+    height: 44px;
+    border: 1px solid #2C6DEB;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule_booking a {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* list_desc */
+.list_desc {
+    padding-top: 25px;
+}
+
+.list_description p {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: justify;
+    color: #535461;
+}
+
+
+
+
+/* -----Review Side ----------*/
+.give_rev h3 {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.review_form textarea {
+    width: 100%;
+    height: 125px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    resize: none;
+    padding: 13px;
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: black;
+
+}
+
+.review_form textarea::placeholder {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #D9D9D9;
+}
+
+.review_form textarea:focus {
+    border: none;
+}
+
+.post_comment {
+    border: 1px solid #2C6DEB;
+    border-radius: 4px;
+    width: 147px;
+    height: 41px;
+    float: right;
+    margin-top: 22px;
+}
+
+.post_comment button {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2C6DEB;
+}
+
+.rev_head h2 {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.all_rev {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 29px;
+}
+
+.rev_arrow {
+    display: flex;
+    padding-top: 0px;
+}
+
+.arrow1 {
+    padding-right: 30px;
+}
+
+.client_review {
+    padding-bottom: 4px;
+}
+
+.client_review:last-child {
+    padding-bottom: 0px;
+}
+
+.client_name {
+    display: flex;
+    padding-bottom: 14px;
+}
+
+.client_name p {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 11px;
+    padding-top: 3px;
+}
+
+.rev_text p {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: justify;
+    color: #535461;
+}
+
+/* nav tabs */
+.nav_tabs {
+    padding-bottom: 8px;
+}
+
+.nav-link {
+    padding: 0rem 1rem;
+}
+
+.nav-pills .nav-link {
+    color: #707075;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #2C6DEB;
+    font-weight: 700;
+    background: none !important;
+}
+
+.list_map iframe,
+.list_video iframe {
+    width: 100%;
+    max-width: 100%;
+
+}
+
+.list_map,
+.list_video video,
+.myslider {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding-top: 38px;
+    padding-bottom: 32px;
+}
+
+
+/* Buy Sell Detail -- */
+.buy_sell_detail_for_sale {
+    padding-bottom: 0px;
+}
+
+.buy_for h5 {
+    padding-top: 29px;
+}
+
+.sale_div a {
+    text-decoration: none;
+}
+
+/* swiper css */
+
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-thumbs {
+    padding-top: 16px !important;
+}
+
+.next_s,
+.pre_s {
+    width: 43px !important;
+    height: 43px !important;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+.next_s::after,
+.pre_s::after {
+    font-size: 19px !important;
+    color: #2C6DEB;
+}
+
+
+@media (max-width:1240px) {
+    .list_detail_flex {
+        flex-wrap: wrap;
+    }
+
+    .list_detail_reviews,
+    .list_detail {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width:767px) {
+    .list_detail {
+        padding: 10px;
+    }
+}
+
+@media (max-width:580px) {
+    .schedule {
+        display: block;
+    }
+
+}
+.menu ul {
+    padding-left: 0px;
+}
+
+.list_detail_flex {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 38px;
+    padding-bottom: 61px;
+    gap: 20px;
+}
+
+.list_detail {
+    max-width: 820px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 13px 11px 33px 28px;
+    width: 100%;
+}
+
+.list_detail_reviews {
+    max-width: 400px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 24px 17px 33px 11px;
+    width: 100%;
+}
+
+.detail {
+    padding-bottom: 32px;
+}
+
+.detail h2 {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    padding-bottom: 40px;
+}
+
+.listing_thumb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listing_thumb img {
+    height: 20px;
+}
+
+.list_locaations {
+    display: flex;
+    padding-bottom: 23px;
+}
+
+.list_locaations p {
+    padding-left: 10px;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #535461;
+}
+
+.call_now {
+    padding-left: 24px;
+}
+
+.call_now a,
+.schedule_booking a {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2C6DEB;
+}
+
+.schedule_booking {
+    max-width: 199px;
+    height: 44px;
+    border: 1px solid #2C6DEB;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule_booking a {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* list_desc */
+.list_desc {
+    padding-top: 25px;
+}
+
+.list_description p {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: justify;
+    color: #535461;
+}
+
+
+
+
+/* -----Review Side ----------*/
+.give_rev h3 {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.review_form textarea {
+    width: 100%;
+    height: 125px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    resize: none;
+    padding: 13px;
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: black;
+
+}
+
+.review_form textarea::placeholder {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #D9D9D9;
+}
+
+.review_form textarea:focus {
+    border: none;
+}
+
+.post_comment {
+    border: 1px solid #2C6DEB;
+    border-radius: 4px;
+    width: 147px;
+    height: 41px;
+    float: right;
+    margin-top: 22px;
+}
+
+.post_comment button {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2C6DEB;
+}
+
+.rev_head h2 {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.all_rev {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 29px;
+}
+
+.rev_arrow {
+    display: flex;
+    padding-top: 0px;
+}
+
+.arrow1 {
+    padding-right: 30px;
+}
+
+.client_review {
+    padding-bottom: 4px;
+}
+
+.client_review:last-child {
+    padding-bottom: 0px;
+}
+
+.client_name {
+    display: flex;
+    padding-bottom: 31px;
+}
+
+.client_name p {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 11px;
+    padding-top: 3px;
+}
+
+.rev_text p {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: justify;
+    color: #535461;
+}
+
+/* nav tabs */
+.nav_tabs {
+    padding-bottom: 8px;
+}
+
+.nav-link {
+    padding: 0rem 1rem;
+}
+
+.nav-pills .nav-link {
+    color: #707075;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #2C6DEB;
+    font-weight: 700;
+    background: none !important;
+}
+
+.list_map iframe,
+.list_video iframe {
+    width: 100%;
+    max-width: 100%;
+
+}
+
+.list_map,
+.list_video video,
+.myslider {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding-top: 38px;
+    padding-bottom: 32px;
+}
+
+
+/* Buy Sell Detail -- */
+.buy_sell_detail_for_sale {
+    padding-bottom: 0px;
+}
+
+.buy_for h5 {
+    padding-top: 29px;
+}
+
+.sale_div a {
+    text-decoration: none;
+}
+
+/* swiper css */
+
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-thumbs {
+    padding-top: 16px !important;
+}
+
+.next_s,
+.pre_s {
+    width: 43px !important;
+    height: 43px !important;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+.next_s::after,
+.pre_s::after {
+    font-size: 19px !important;
+    color: #2C6DEB;
+}
+
+
+@media (max-width:1240px) {
+    .list_detail_flex {
+        flex-wrap: wrap;
+    }
+
+    .list_detail_reviews,
+    .list_detail {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width:767px) {
+    .list_detail {
+        padding: 10px;
+    }
+}
+
+@media (max-width:580px) {
+    .schedule {
+        display: block;
+    }
+
+}
+
+
+/* Follow Section Styles */
+
+  
+  
+  
+.follow-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .follow-button {
+    background-color: transparent; 
+    color: #1877f2; 
+    border: 1px solid #1877f2; 
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .follow-button.following {
+    background-color: #1877f2; 
+    color: #fff;
+  }
+  
+  .follower-count {
+    margin-left: 10px;
+    color: #606770; 
+    font-size: 14px;
+  }
+  /* Like Section Styles */
+
+  
+  
+  
+
+  .like-button {
+    background-color: transparent; 
+    color: #1877f2; 
+    border: 1px solid #1877f2; 
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .like-button.liked {
+    background-color: #010710; 
+    color: #fff; 
+  }
+  
+  .like-count {
+    margin-left: 10px;
+    color: #606770; 
+    font-size: 14px;
+  }
+  
+  .like-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 5px; 
+    vertical-align: middle;
+  }
+
+
+/* Add your custom styles here */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    margin-right: 15px;
+    padding-top: 10px !important;
+  }
+  
+  .nav-link {
+    padding-top: 10px !important;
+    color: #000 !important;
+  }
+  
+  .nav-icon {
+    font-size: 1.5rem;
+    margin-right: 8px;
+  }
+  
+  .nav-username {
+    font-weight: bold;
+  }
+  
+
