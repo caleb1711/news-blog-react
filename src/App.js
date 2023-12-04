@@ -12,7 +12,7 @@ import BlogDetail from './components/blogdetails';
 import AddBlog from './components/blog/addblog';
 
 const App = () => {
-  <Link to='/reset/'>Go to Aboutpage</Link>
+  // <Link to='/reset/'>Go to Aboutpage</Link>
   return (
     <Router>
       <Routes>

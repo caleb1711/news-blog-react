@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
 import client from '../../api/client';
+import Header from '../header';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -15,7 +14,6 @@ const ForgotPassword = () => {
       const response = await client.post('/accounts/user/forget_password/', {
         email,
       });
-
       setMessages([response.data.detail]);
     } catch (error) {
       setErrors(Object.values(error.response.data));
@@ -24,18 +22,7 @@ const ForgotPassword = () => {
 
   return (
     <div className="container-fluid p-0">
-      {/* Header */}
-      <div className="main_header">
-        <div className="container main_header_container">
-          <div className="main_header_text">
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <h4>News</h4>
-              <p>Blog</p>
-            </Link>
-          </div>
-        </div>
-      </div>
-
+      <Header />
       {/* Forgot Password Form */}
       <div style={{ padding: '0 1rem' }}>
         <div className="accounts_section">

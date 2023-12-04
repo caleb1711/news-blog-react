@@ -1,158 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import client from '../../api/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/accounts.css';
-import { getToken, removeToken } from '../../util/jwt';
-
+import React, { useState, useEffect } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import client from "../../api/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../style/accounts.css";
+import { getToken, removeToken } from "../../util/jwt";
+import Header from "../header";
 
 const EditBlog = () => {
-  
   const { id } = useParams();
-  const [userIsAuthenticated, setUserIsAuthenticated] = useState(false);
-  const [userData, setUserData] = useState([]);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [messages, setMessages] = useState([]);
   const [formErrors, setFormErrors] = useState([]);
   const [image, setImage] = useState(null);
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const userProfileImageUrl = 'https://e7.pngegg.com/pngimages/136/22/png-clipart-user-profile-computer-icons-girl-customer-avatar-angle-heroes-thumbnail.png';
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-  };
-
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
   useEffect(() => {
-    const fetchUser = async () => {
-      try {
-
-        const response = await client.get('/accounts/user/');
-        const token = getToken()
-        setUserIsAuthenticated(!!token)
-
-        console.log('the data of ', response.data)
-        const { userFirstName, messages } = response.data;
-        setUserData(response.data);
-        setMessages(messages);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
-
     const fetchData = async () => {
       try {
-        const token = localStorage.getItem('token');
-        setUserIsAuthenticated(!!token);
-
         const response = await client.get(`/blog/${id}/`);
-        console.log('the data of ', response.data)
+        console.log("the data of ", response.data);
         setTitle(response.data.title);
         setContent(response.data.content);
-        const { userFirstName, messages } = response.data;
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
     fetchData();
-    fetchUser();
   }, []);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const token = localStorage.getItem('token');
-
       const formData = new FormData();
-      formData.append('image', image);
-      formData.append('title', title);
-      formData.append('content', content);
+      if (image) formData.append("image", image);
+      if (title) formData.append("title", title);
+      if (content) formData.append("content", content);
 
       const response = await client.patch(`/blog/${id}/`, formData);
 
       setImage(null);
-      setTitle('');
-      setContent('');
+      setTitle("");
+      setContent("");
 
-      console.log('Form submitted successfully:', response.data);
-      navigate("/myblogs")
+      console.log("Form submitted successfully:", response.data);
+      navigate("/myblogs");
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
     }
   };
 
   return (
     <div className="container-fluid p-0">
-       {/* Header section */}
-       <div className="main_header dashboard_header">
-        <div className="container main_header_container">
-          <div className="main_header_text">
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <h4>News</h4>
-              <p>Blog</p>
-            </Link>
-          </div>
-
-          <nav className="navbar navbar-expand-lg navbar-light">
-            <div className="container-fluid">
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                  {userIsAuthenticated ? (
-                    <>
-                      <li className="nav-item">
-                        <Link to="/myblogs" className="nav-link">
-                          My Blogs
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link to="/addblog" className="nav-link">
-                          Add Blog
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link to="/login" className="nav-link">
-                          Log Out
-                        </Link>
-                      </li>
-                      <li className="nav-link">
-                          <img 
-                          src={userProfileImageUrl}
-                          alt="User Profile"
-                          className="navbar-profile-image" 
-                          onClick={handleLogout}
-                          /> 
-                          {userData.first_name}
-                      </li>
-                      
-                    </>
-                  ) : (
-                    <li className="nav-item">
-                      <Link to="/login" className="nav-link">
-                        Login
-                      </Link>
-                    </li>
-                  )}
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-
-
-
+      <Header />
       {/* Main content section */}
       <div className="container blog_container">
         <h1 className="m-3 text-center">Edit BLOG</h1>
@@ -201,7 +101,6 @@ const EditBlog = () => {
                 id="inputAddress2"
                 placeholder="Enter Blog Image..."
                 onChange={(e) => setImage(e.target.files[0])}
-                
               />
             </div>
 
@@ -238,13 +137,6 @@ const EditBlog = () => {
           </form>
         </div>
       </div>
-
-      {/* Footer section */}
-      <footer className="footer">
-        <div className="footer-content">
-          <p>&copy; 2023 News Blog. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };

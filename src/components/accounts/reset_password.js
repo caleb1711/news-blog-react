@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 import client from '../../api/client';
+import Header from '../header';
 
 const ResetPassword = () => {
   const { uid, token } = useParams();
@@ -27,20 +27,7 @@ const ResetPassword = () => {
 
   return (
     <div className="container-fluid p-0">
-      {/* Header */}
-      <div className="main_header">
-        <div className="container main_header_container">
-          <div className="main_header_text">
-            <a href="/" style={{ textDecoration: 'none' }}>
-              <h4>
-                Bl<span style={{ color: '#ea2d00' }}>o</span>g
-              </h4>
-              <p>Institute</p>
-            </a>
-          </div>
-        </div>
-      </div>
-
+      <Header />
       {/* Reset Password Form */}
       <div style={{ padding: '0 1rem' }}>
         <div className="accounts_section">

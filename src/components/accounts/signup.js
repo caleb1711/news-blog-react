@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/accounts.css';
 import client from '../../api/client';
+import Header from '../header';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -39,18 +39,7 @@ const SignUp = () => {
 
   return (
     <div className="container-fluid p-0">
-      <div className="main_header">
-        <div className="container main_header_container">
-          <div className="main_header_text">
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <h4>
-                Ne<span style={{ color: '#ea2d00' }}>w</span>s
-              </h4>
-              <p>Blog</p>
-            </Link>
-          </div>
-        </div>
-      </div>
+      <Header />
       <div style={{ padding: '0 1rem' }}>
         <div className="accounts_section">
           <h6>Sign Up</h6>
