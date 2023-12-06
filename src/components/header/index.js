@@ -3,6 +3,7 @@ import withUser from "../withUser";
 import { DEFAULT_USER_PROFILE, USER_STORAGE_KEY } from "../../config/constants";
 import { Link } from "react-router-dom";
 import { removeToken } from "../../util/jwt";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function Header({ user }) {
   const handleLogout = () => {
@@ -19,24 +20,10 @@ function Header({ user }) {
             <p>Blog</p>
           </Link>
         </div>
-        <nav className="navbar navbar-expand-lg navbar-light">
-          <div className="container-fluid">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 {user ? (
                   <>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <Link to="/myblogs" className="nav-link">
                         My Blogs
                       </Link>
@@ -62,7 +49,41 @@ function Header({ user }) {
                         className="navbar-profile-image"
                       />
                       <span></span>
+                    </li> */}
+                    {/*  */}
+                    <button
+                      className="dropdown-toggle header_dropdown_top"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <div className="user_name_and_iamge">
+                        <img src={DEFAULT_USER_PROFILE} alt="" />
+                        <h6 className="user_name_top"></h6>
+                      </div>
+                    </button>
+                    <ul className="dropdown-menu dropdown_menu_item">
+                    <li className="">
+                      <Link to="/myblogs" className="dropdown-item item_1">
+                        My Blogs
+                      </Link>
                     </li>
+                    <li className="">
+                      <Link to="/addblog" className="dropdown-item item_1">
+                        Add Blog
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link
+                        to="/login"
+                        className="dropdown-item item_1"
+                        onClick={handleLogout}
+                      >
+                        Log Out
+                      </Link>
+                    </li>
+                    </ul>
+                    {/* dropdown-item item_1 */}
                   </>
                 ) : (
                   <li className="nav-item">
@@ -72,9 +93,7 @@ function Header({ user }) {
                   </li>
                 )}
               </ul>
-            </div>
-          </div>
-        </nav>
+           
       </div>
     </div>
   );

@@ -43,10 +43,10 @@
   justify-content: space-between;
 }
 .isearch{
-  width: 90% !important;
+  width: 80% !important;
 }
 .sbutton{
-  width: 10% !important;
+  width: 20% !important;
   background: #e84610 !important;
   padding: 11px 0px !important;
 
@@ -149,7 +149,7 @@
 }
 
 .dropdown_menu_item a {
-  color: #fff;
+  color: black;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;

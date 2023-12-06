@@ -51,7 +51,7 @@ const AllBlogs = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <button className="btn  my-2 my-sm-0 sbutton" onClick={handleSearch}>
+          <button className="btn   my-sm-0 sbutton" onClick={handleSearch}>
             Search
           </button>
         </div>

@@ -52,7 +52,8 @@ const BlogDetail = ({ user }) => {
   };
 
   const handleLike = async (e) => {
-    const icon = e.currentTarget;
+    if(user){
+      const icon = e.currentTarget;
     icon.classList.add("clicked");
     setTimeout(() => {
       icon.classList.remove("clicked");
@@ -63,6 +64,11 @@ const BlogDetail = ({ user }) => {
     } catch (error) {
       console.error("Error liking:", error);
     }
+    }
+    else{
+      alert("Please Login to like the blog")
+    }
+    
   };
 
   return (
