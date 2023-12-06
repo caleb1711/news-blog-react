@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import client from '../../api/client';
 import Header from '../header';
 
@@ -9,8 +9,12 @@ const ResetPassword = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [messages, setMessages] = useState([]);
   const [errors, setErrors] = useState([]);
+  const navigate = useNavigate();
 
   const handleResetPassword = async (e) => {
+    if (password !== confirmPassword) {
+      alert("Passwords don't match!");
+    }
     e.preventDefault();
 
     try {
@@ -18,8 +22,8 @@ const ResetPassword = () => {
         password:password,
         password1: confirmPassword,
       });
-
-      setMessages([response.data.detail]);
+      setMessages([response.data]);
+      navigate("/login")
     } catch (error) {
       setErrors(Object.values(error.response.data));
     }

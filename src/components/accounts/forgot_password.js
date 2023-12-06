@@ -14,7 +14,7 @@ const ForgotPassword = () => {
       const response = await client.post('/accounts/user/forget_password/', {
         email,
       });
-      setMessages([response.data.detail]);
+      setMessages([response.data.message]);
     } catch (error) {
       setErrors(Object.values(error.response.data));
     }

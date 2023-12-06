@@ -19,9 +19,14 @@ const SignUp = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    
   };
 
   const handleSignUp = () => {
+    if (formData.password !== formData.password2) {
+      alert("Passwords don't match!");
+    }
+    
     client.post('/accounts/user/', formData)
       .then(response => {
         console.log(response.data);
