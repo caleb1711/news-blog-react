@@ -14,7 +14,7 @@ News Blog is a full-featured blogging platform that empowers users to share new 
    - This site is also provide the feature of authentication. If any user can wish to write news blog he/she able to do this just by login or signup her/his self.
    - and an Authenticated user can access all the features of this site.
 
-     ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/f83033cb-e41a-488c-8fd6-8e749067424f)
+![image](https://github.com/caleb1711/news-blog-react/assets/130179631/f83033cb-e41a-488c-8fd6-8e749067424f)
 
 -__Signup Page__
     - This site is also provide the feature of register to user and writing thi blog
