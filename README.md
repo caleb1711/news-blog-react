@@ -19,7 +19,7 @@ News Blog is a full-featured blogging platform that empowers users to share new 
 -__Signup Page__
     - This site is also provide the feature of register to user and writing thi blog
 
-    ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/f6c8c310-6226-4f81-ab4e-56270168dae0)
+![image](https://github.com/caleb1711/news-blog-react/assets/130179631/f6c8c310-6226-4f81-ab4e-56270168dae0)
 
 
 -__Forget Pssword__
