@@ -93,6 +93,9 @@ News Blog is a full-featured blogging platform that empowers users to share new 
    ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/b4072e8d-48b1-437f-8c83-5dddd9cb06f8)
 
 
+- __Responsive__
+
+![image](https://github.com/caleb1711/news-blog-react/assets/130179631/69dab22e-4946-4a43-993e-b3c0fb94792a)
 
 
 
