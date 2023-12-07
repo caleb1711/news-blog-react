@@ -1,11 +1,12 @@
-# News Institute 
-News Institute is a full-featured blogging platform that empowers users to share new newses and also share their thoughts, ideas and views about that newses with the whole world. whether you are an aspiring writer or a seasoned bloger, our platfrom provides the tools and features that you need to create, manage, and also share your blogs about news. 
+# News Blog 
+News Blog is a full-featured blogging platform that empowers users to share new newses and also share their thoughts, ideas and views about that newses with the whole world. whether you are an aspiring writer or a seasoned bloger, our platfrom provides the tools and features that you need to create, manage, and also share your blogs about news. 
 
 
 -__Home Page__
 
    - User can see all blogs and also check details and comment on the blog just by clicking on read more button and also he/she able to comment on this plog and liked it and the best feature of this app is that a user can also follow the bloger. 
 
+![image](https://github.com/caleb1711/news-blog-react/assets/130179631/f1419d6a-773d-482d-93ef-eaf0e71a4b88)
 
 
 
@@ -13,10 +14,34 @@ News Institute is a full-featured blogging platform that empowers users to share
    - This site is also provide the feature of authentication. If any user can wish to write news blog he/she able to do this just by login or signup her/his self.
    - and an Authenticated user can access all the features of this site.
 
+     ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/f83033cb-e41a-488c-8fd6-8e749067424f)
+
+-__Signup Page__
+    - This site is also provide the feature of register to user and writing thi blog
+
+    ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/f6c8c310-6226-4f81-ab4e-56270168dae0)
+
 
 -__Forget Pssword__
   - There are many chances that a user can forget or loss his/her password, but in this way this site is provide the feature of reset password , the user can also reset his/her password and again able to login her/his account.
   - User enter his/her email and the system send recovery link on email, the user will go to the reset password page and easily change his password.
+
+![image](https://github.com/caleb1711/news-blog-react/assets/130179631/cf90c0bf-18fe-4337-bace-d718b06affbc)
+
+
+-__All Blog Page__
+   - In home page user can see the all blogs.
+
+     ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/ff58db83-d155-4159-b77b-cb2b5525509a)
+
+-__Blog Detail__
+   - User can read the blog detail.
+   - User can add the comment on post.
+   - user can like the post
+   - user like/dislike the post
+
+     ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/98d0476c-c6aa-4858-8a59-09be50bc5559)
+
 
 
 -__My Blog Page__
@@ -25,16 +50,28 @@ News Institute is a full-featured blogging platform that empowers users to share
    - User can edit a blog and also delete the blog.
 
 
+   ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/cc6f75f4-d720-420b-88d5-89141c27ca32)
+
+     
 
 - __Edit Blog Page__
    - User can edit his blog easily user will click on edit button and he will go to the edit page .
    - edit page will show prefilled data about blog.
+ 
+     ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/c6477189-f5ac-4de7-9275-6e069d710d90)
+
 
 
 - __Add Blog Page__
    - User can add the blog  easily .
  
+   ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/84cadb56-ff72-4fa6-b5dc-ad162759e0e6)
 
+
+- __Delete Blog __
+   - User can Delete the blog  easily.
+
+    ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/3e79edb7-2525-427d-9552-cedb0a2e203a)
 
 
 - __LOGOUT__
@@ -51,7 +88,10 @@ News Institute is a full-featured blogging platform that empowers users to share
 
 
 - __FOOTER__
-   - Copyright Information: We respect intellectual property rights. The footer contains copyright information to protect user-generated content and ensure proper attribution.
+   - Copyright Information: We respect intellectual property rights. 
+ 
+   ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/b4072e8d-48b1-437f-8c83-5dddd9cb06f8)
+
 
 
 
