@@ -50,7 +50,8 @@ News Blog is a full-featured blogging platform that empowers users to share new 
    - User can edit a blog and also delete the blog.
 
 
-   ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/cc6f75f4-d720-420b-88d5-89141c27ca32)
+   ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/73480e87-96ec-4504-88fc-6d947fca2921)
+
 
      
 
