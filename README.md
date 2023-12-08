@@ -227,7 +227,13 @@ Calkra15@outlook.com
 
 ## Acknowledgments
 
-- Credit any resources, libraries, or individuals you'd like to acknowledge.
+- Bootsrap
+- Roboto Fonts
+- React
+- Images from original source
+- Html, CSS
+- axios 
+
 
 ## Contact
 
