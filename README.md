@@ -142,6 +142,23 @@ News Blog is a full-featured blogging platform that empowers users to share new 
 - Upload and display images in news blog posts and comments.
 
 
+## Acknowledgments
+
+### Libraries and Frameworks
+- [Bootstrap](https://getbootstrap.com/)
+- [React](https://reactjs.org/)
+- [axios](https://github.com/axios/axios)
+
+### Fonts
+- Roboto Fonts
+
+### Image Sources
+- Images sourced from different websited
+
+### Technologies Used
+- HTML
+- CSS
+
 
 ## Getting Started
 
@@ -225,14 +242,7 @@ Feel free to contribute by submitting pull requests, reporting issues, or sugges
 
 Calkra15@outlook.com
 
-## Acknowledgments
 
-- Bootsrap
-- Roboto Fonts
-- React
-- Images from original source
-- Html, CSS
-- axios 
 
 
 ## Contact
