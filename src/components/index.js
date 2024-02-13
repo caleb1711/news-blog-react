@@ -4,8 +4,10 @@ import "./style/accounts.css";
 import client from "../api/client";
 import Header from "./header";
 
+
 const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -19,6 +21,7 @@ const AllBlogs = () => {
           };
         });
         setBlogs(updatedResponseData);
+        setLoading(false); 
         console.log(response.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -57,52 +60,57 @@ const AllBlogs = () => {
         </div>
         <h1 className="m-5 text-center">ALL BLOGS</h1>
         <hr />
-        <div className="row">
-          {blogs.length > 0 ? (
-            blogs.map((blog) => (
-              <div key={blog.id} className="col-lg-4 col-md-6 col-sm-12">
-                <div className="blog_card">
-                  <div className="blog_card_image">
-                    <img src={blog.image} height="185px" alt="" />
-                  </div>
-                  <div className="blog_card_content">
-                    <h3>{blog.title}</h3>
-                    <p>{blog.content.slice(0, 50)}</p>
-                    <p>Category : {blog?.category?.name}</p>
-                    <div className="blog_actions">
-                      {/* Like Icon */}
-                      <span className="blog_action_icon">
-                        <p> Likes : {blog.total_likes} </p>
-                      </span>
-                      {/* Follow Icon */}
-                      <span className="blog_action_icon"></span>
+        {loading ? ( 
+          <div className="loader" style={{ color: '#E84609', textAlign: 'center', padding: '20px', fontSize: '24px' }}>Loading...</div>
+        ) : (
+          <div className="row">
+            {blogs.length > 0 ? (
+              blogs.map((blog) => (
+                <div key={blog.id} className="col-lg-4 col-md-6 col-sm-12">
+                  <div className="blog_card">
+                    <div className="blog_card_image">
+                      <img src={blog.image} height="185px" alt="" />
                     </div>
-                    <Link
-                      to={{
-                        pathname: `/blog_detail/${blog.id}`,
-                        state: { blogDetails: blog },
-                      }}
-                      className="read_more_button"
-                    >
-                      Read More
-                    </Link>
-                    <div className="blog_date">
-                      <p> </p>
-                      <p>{blog.commentsCount} Comments</p>
+                    <div className="blog_card_content">
+                      <h3>{blog.title}</h3>
+                      <p>{blog.content.slice(0, 50)}</p>
+                      <p>Category : {blog?.category?.name}</p>
+                      <div className="blog_actions">
+                        {/* Like Icon */}
+                        <span className="blog_action_icon">
+                          <p> Likes : {blog.total_likes} </p>
+                        </span>
+                        {/* Follow Icon */}
+                        <span className="blog_action_icon"></span>
+                      </div>
+                      <Link
+                        to={{
+                          pathname: `/blog_detail/${blog.id}`,
+                          state: { blogDetails: blog },
+                        }}
+                        className="read_more_button"
+                      >
+                        Read More
+                      </Link>
+                      <div className="blog_date">
+                        <p> </p>
+                        <p>{blog.commentsCount} Comments</p>
+                      </div>
                     </div>
                   </div>
                 </div>
+              ))
+            ) : (
+              <div className="col-lg-4 col-md-6 col-sm-12">
+                <h3>No Blog available at this time.</h3>
               </div>
-            ))
-          ) : (
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <h3>No Blog available at this time.</h3>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
-};
+}
 
 export default AllBlogs;
+

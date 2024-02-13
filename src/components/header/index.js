@@ -12,90 +12,75 @@ function Header({ user }) {
   };
 
   return (
-    <div className="main_header dashboard_header">
-      <div className="container main_header_container">
-        <div className="main_header_text">
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <h4>News</h4>
-            <p>Blog</p>
-          </Link>
-        </div>
-              <ul className="navbar-nav">
+  
+
+    // 
+    <div class="container-fluid p-0">
+    <div class="main_header dashboard_header">
+        <nav class="navbar navbar-expand-lg  custom-header">
+            <div class="main_header_text">
+            <Link to="/" style={{ textDecoration: "none" }}>
+                <h4>Ne<span style={{ color: "#ea2d00" }}>w</span>s</h4>
+                <p>Blog</p>
+            </Link>
+            </div>
+            <button class="navbar-toggler navbar_toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav navbar_nav">
+                <li class="nav-item">
+                  <Link to='/' className="nav-link"> Home</Link>
+                </li>
+                <li class="nav-item">
+                <Link to='/' className="nav-link"> About Us</Link>
+                </li>
+               
+                <li class="nav-item">
+                <Link to='/' className="nav-link"> Contact Us</Link>
+                </li>
                 {user ? (
                   <>
-                    {/* <li className="nav-item">
-                      <Link to="/myblogs" className="nav-link">
-                        My Blogs
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/addblog" className="nav-link">
-                        Add Blog
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        to="/login"
-                        className="nav-link"
-                        onClick={handleLogout}
-                      >
-                        Log Out
-                      </Link>
-                    </li>
-                    <li className="nav-item user-profile">
-                      <img
-                        src={DEFAULT_USER_PROFILE}
-                        alt="User Profile"
-                        className="navbar-profile-image"
-                      />
-                      <span></span>
-                    </li> */}
-                    {/*  */}
-                    <button
-                      className="dropdown-toggle header_dropdown_top"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <div className="user_name_and_iamge">
-                        <img src={DEFAULT_USER_PROFILE} alt="" />
-                        <h6 className="user_name_top"></h6>
-                      </div>
-                    </button>
-                    <ul className="dropdown-menu dropdown_menu_item">
-                    <li className="">
-                      <Link to="/myblogs" className="dropdown-item item_1">
-                        My Blogs
-                      </Link>
-                    </li>
-                    <li className="">
-                      <Link to="/addblog" className="dropdown-item item_1">
-                        Add Blog
-                      </Link>
-                    </li>
-                    <li className="">
-                      <Link
-                        to="/login"
-                        className="dropdown-item item_1"
-                        onClick={handleLogout}
-                      >
-                        Log Out
-                      </Link>
-                    </li>
-                    </ul>
-                    {/* dropdown-item item_1 */}
-                  </>
-                ) : (
-                  <li className="nav-item">
-                    <Link to="/login" className="nav-link">
-                      Login
+                  <li class="nav-item">
+                  <Link to="/addblog" className="nav-link">
+                    Add Blog
                     </Link>
                   </li>
+                  <li class="nav-item">
+                  <Link to="/myblogs" className="nav-link">
+                    My Blogs
+                    </Link>
+                  </li>
+                  
+                  <li class="nav-item">
+                  <Link
+                        to="/login"                        
+                        onClick={handleLogout}
+                      >
+                    <button class="btn login-btn" onclick="redirectTo('{% url 'logout' %}')">Log Out</button>
+                    </Link>
+                  </li>
+                  </>
+                ) : (
+                  <div class="d-flex gap-3">
+                    <li class="nav-item">
+                    <Link to="/login" >
+                        <button class="btn login-btn" >Login</button>
+                      </Link>
+                      </li>
+                      <li class="nav-item">
+                        <button class="btn register-btn"  onclick="redirectTo('{% url 'signup' %}')">Register</button>
+                      </li>
+                  </div>
                 )}
+                
               </ul>
-           
-      </div>
+            </div>
+          </nav>
+ 
     </div>
+  
+  </div>
   );
 }
 
