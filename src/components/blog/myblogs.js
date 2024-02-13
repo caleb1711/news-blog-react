@@ -9,6 +9,7 @@ const MyBlogs = () => {
   const [messages] = useState([]);
   const [userName, setUserName] = useState("unknown");
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -19,6 +20,7 @@ const MyBlogs = () => {
         if (response.status === 200) {
           if (Array.isArray(response.data)) {
             setBlogs(response.data);
+            setLoading(false);
           } else {
             console.error("API response is not an array:", response.data);
           }
@@ -51,6 +53,7 @@ const MyBlogs = () => {
       <div className="container-fluid p-0">
         <Header />
         <div className="container blog_container">
+        
           {messages.length > 0 && (
             <div>
               {messages.map((message, index) => (
@@ -73,6 +76,9 @@ const MyBlogs = () => {
 
           <h1 className="m-5 text-center">MY BLOGS</h1>
           <hr />
+          {loading ? ( 
+          <div className="loader" style={{ color: '#E84609', textAlign: 'center', padding: '20px', fontSize: '24px' }}>Loading...</div>
+        ) : (
           <div className="row">
             {blogs.length > 0 ? (
               blogs.map((blog) => (
@@ -115,6 +121,8 @@ const MyBlogs = () => {
               </div>
             )}
           </div>
+
+        )}
         </div>
       </div>
     </>
