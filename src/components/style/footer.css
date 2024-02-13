@@ -1,0 +1,58 @@
+.footer {
+    background-color: #445261; 
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+    padding: 25px;
+    border-radius: 200px 200px 0 0
+}
+.signup-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.red-section {
+    margin-left: 190px;
+    margin-right: 190px;
+    height: 35px;
+    background-color: red;
+    
+    clip-path:   polygon(86% 40%, 97% 52%, 99% 75%, 100% 100%, 50% 100%, 0 100%, 1% 70%, 3% 50%, 15% 39%);
+
+}
+
+.black-section {
+    background-color: black;
+    padding: 30px;
+}
+.black-section a {
+    text-decoration: none;
+}
+
+.black-section .text-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.black-section .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff; 
+}
+
+.logo-link {
+    color: inherit;
+}
+
+
+.copy_right {
+    background-color: #445261;
+    margin: 0;
+    padding: 30px;
+    color: #fff; 
+    text-align: center;
+    
+}
+

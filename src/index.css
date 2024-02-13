@@ -11,3 +11,116 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* footer section */
+
+
+.footerText {
+  background-color: #445261; 
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  margin: 0;
+  padding: 25px;
+  border-radius: 200px 200px 0 0
+}
+.footerText h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.footerText h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.signup-link {
+  text-decoration: none;
+}
+.signup-link h2 {
+  text-align: center;
+  color: #ea2d00 !important;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Inter";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.black-section {
+  background: #1e1e1e !important;
+  border-top: 1px solid #777;
+  color: white;
+  padding: 70px 80px;
+}
+
+
+
+
+@media screen and (max-width: 578px) {
+  .desc_section ul {
+    padding-left: 20px !important;
+  }
+  .blog_container {
+    margin-top: 9rem;
+  }
+  .terms_and_conditions_section h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .desc_section h3 {
+    font-size: 17px;
+  }
+  .desc_section p {
+    font-size: 15px;
+  }
+  .privacy-box h2 {
+    font-size: 24px !important;
+  }
+  .privacy-box {
+    padding: 25px 24px 50px 24px !important;
+  }
+  .footerText {
+    border-radius: 70px 70px 0 0;
+    padding: 60px 20px;
+  }
+  .footerText h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .footerText h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .signup-link h2 {
+    font-size: 30px;
+  }
+  .logo-link-col {
+    justify-content: center;
+  }
+  .list-unstyled li {
+    text-align: center;
+  }
+  .black-section {
+    padding: 50px 26px;
+  }
+  .copy_right {
+    font-size: 15px;
+  }
+  .copy_rightDiv {
+    min-height: 65px;
+  }
+  .list-unstyled {
+    margin-bottom: 2rem;
+  }
+  .account_input {
+    min-height: 46px;
+    min-width: 260px;
+    font-size: 17px;
+  }
+  .sign_in_button {
+    min-width: 278px;
+    margin-top: 7px;
+  }
+  .dropdown_menu_item {
+    min-width: 130px;
+  }
+}
