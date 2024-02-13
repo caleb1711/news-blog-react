@@ -1,58 +1,175 @@
-.footer {
-    background-color: #445261; 
-    color: white;
+.footer p {
+    margin-bottom: 0px !important;
+  }
+  .footerText {
+    background-color: #445261;
+    border-radius: 100px 100px 0 0;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerText h1 {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
     text-align: center;
-    line-height: 30px;
-    margin: 0;
-    padding: 25px;
-    border-radius: 200px 200px 0 0
-}
-.signup-link {
-    text-decoration: none; 
-    color: inherit; 
-}
-
-.red-section {
-    margin-left: 190px;
-    margin-right: 190px;
-    height: 35px;
-    background-color: red;
-    
-    clip-path:   polygon(86% 40%, 97% 52%, 99% 75%, 100% 100%, 50% 100%, 0 100%, 1% 70%, 3% 50%, 15% 39%);
-
-}
-
-.black-section {
-    background-color: black;
-    padding: 30px;
-}
-.black-section a {
+  }
+  .footerText h3 {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .signup-link {
     text-decoration: none;
-}
+  }
+  .signup-link h2 {
+    text-align: center;
+    color: #ea2d00 !important;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Inter";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .black-section {
+    padding: 50px 26px;
+  }
+  .black-section {
+    background: #1e1e1e !important;
+    border-top: 1px solid #777;
+    color: white;
+    padding: 70px 80px;
+  }
+  .logo-link-col {
+    display: flex;
+    /* align-items: center; */
+  }
 
-.black-section .text-center {
+  .logo-link {
+    text-decoration: none;
+  }
+  .logo-link h2 {
+    color: #ea2d00 !important;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Inter";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .main_header_text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100px;
+  }
+  .main_header_text h4 {
+    margin-bottom: 0;
+    color: #445261;
+    font-weight: 600;
+    font-size: 36px;
+    font-family: "Inter";
+  }
+  .main_header_text p {
+    font-family: "Inter";
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ea2d00;
+    padding-left: 35px;
+    margin-top: -3px;
+  }
+  .list-unstyled li {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1rem;
+  }
+  .copy_rightDiv {
+    background: #445261;
+    height: auto;
+    min-height: 93px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.black-section .nav-link {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #fff; 
-}
-
-.logo-link {
-    color: inherit;
-}
-
-
-.copy_right {
-    background-color: #445261;
-    margin: 0;
-    padding: 30px;
-    color: #fff; 
+  }
+  .copy_right {
+    margin-bottom: 0px !important;
+    color: #fff !important;
+    font-family: "Inter";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     text-align: center;
-    
+  }
+  .nav-link1{
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+
+  @media screen and (max-width: 992px) {
+    .black-section {
+      padding: 60px 48px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .logo-link-col {
+      align-items: start;
+    }
+    .list-unstyled {
+        margin-bottom: 3rem;
+      }
 }
 
+  @media screen and (max-width: 578px) {
+    .footerText {
+        border-radius: 70px 70px 0 0;
+        padding: 60px 20px;
+      }
+      .footerText h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+      .footerText h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .signup-link h2 {
+        font-size: 30px;
+      }
+      .black-section {
+        padding: 50px 26px;
+      }
+      .logo-link-col {
+        justify-content: center;
+      }
+      .list-unstyled li {
+        text-align: center;
+      }
+      .list-unstyled {
+        margin-bottom: 2rem;
+      }
+      .copy_right {
+        font-size: 15px;
+      }
+
+  }
