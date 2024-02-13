@@ -33,7 +33,7 @@ function Header({ user }) {
                   <Link to='/' className="nav-link"> Home</Link>
                 </li>
                 <li class="nav-item">
-                <Link to='/' className="nav-link"> About Us</Link>
+                <Link to='/about' className="nav-link"> About Us</Link>
                 </li>
                
                 <li class="nav-item">

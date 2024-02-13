@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AllBlogs from './components/index';
 import EditBlog from './components/blog/editblog';
@@ -10,6 +9,7 @@ import SignUp from './components/accounts/signup';
 import MyBlogs from './components/blog/myblogs';
 import BlogDetail from './components/blogdetails';
 import AddBlog from './components/blog/addblog';
+import About from './components/about';
 
 const App = () => {
   // <Link to='/reset/'>Go to Aboutpage</Link>
@@ -26,6 +26,7 @@ const App = () => {
         <Route path="/blog/:id" />
         <Route path="/addblog" element={<AddBlog />} />
         <Route path="/editblog/:id" element={<EditBlog />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
