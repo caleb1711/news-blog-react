@@ -32,10 +32,10 @@ root.render(
                 <div className="col-lg-3 col-md-2 col-sm-4 col-12">
                     <ul className="list-unstyled">
                         <li>
-                            <a href="#" className="nav-link1">About</a>
+                            <a href="/about" className="nav-link1">About</a>
                         </li>
                         <li>
-                            <a href="#" className="nav-link1">Contact Us</a>
+                            <a href="/contact" className="nav-link1">Contact Us</a>
                         </li>
                         
                     </ul>

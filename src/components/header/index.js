@@ -37,7 +37,7 @@ function Header({ user }) {
                 </li>
                
                 <li class="nav-item">
-                <Link to='/' className="nav-link"> Contact Us</Link>
+                <Link to='/contact' className="nav-link"> Contact Us</Link>
                 </li>
                 {user ? (
                   <>

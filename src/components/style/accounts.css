@@ -259,7 +259,10 @@
   color: white;
   text-transform: capitalize;
 }
-
+.btn-primary{
+  background-color: #e84610 !important;
+  border: 1px solid #e84610 !important;
+}
 
 @media screen and (max-width: 1200px){
   .blog_date p{

@@ -10,6 +10,7 @@ import MyBlogs from './components/blog/myblogs';
 import BlogDetail from './components/blogdetails';
 import AddBlog from './components/blog/addblog';
 import About from './components/about';
+import Contact from './components/contact';
 
 const App = () => {
   // <Link to='/reset/'>Go to Aboutpage</Link>
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/addblog" element={<AddBlog />} />
         <Route path="/editblog/:id" element={<EditBlog />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
