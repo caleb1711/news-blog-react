@@ -16,6 +16,8 @@ const AddBlog = () => {
   const [formImage, setFormImage] = useState(null);
   const [formTitle, setFormTitle] = useState("");
   const [formContent, setFormContent] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [isAddingBlog, setIsAddingBlog] = useState(false); 
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -30,9 +32,22 @@ const AddBlog = () => {
     };
     fetchCategories();
   }, []);
+
+  useEffect(() => {
+    const validateForm = () => {
+      const isValid =
+        formImage && formTitle.trim() !== "" && formContent.trim() !== "" && category;
+      setIsFormValid(isValid);
+    };
+    validateForm();
+  }, [formImage, formTitle, formContent, category]);
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    if (isAddingBlog) return; 
+
     try {
+      setIsAddingBlog(true); 
       const formData = new FormData();
       formData.append("image", formImage);
       formData.append("title", formTitle);
@@ -46,6 +61,8 @@ const AddBlog = () => {
       console.log("Form submitted successfully:", response.data);
     } catch (error) {
       console.error("Error submitting form:", error);
+    } finally {
+      setIsAddingBlog(false); 
     }
   };
 
@@ -111,15 +128,21 @@ const AddBlog = () => {
             <select
               name="category"
               className="form-select mb-3"
-              required
+              value={category}
               onChange={(e) => setCategory(e.target.value)}
+              required
             >
+              <option value="">Select category</option>
               {categories.map((cat) => (
-                <option value={cat.id}>{cat.name}</option>
+                <option key={cat.id} value={cat.id}>{cat.name}</option>
               ))}
             </select>
-            <button type="submit" className="btn btn-primary w-100">
-              Add Blog
+            <button
+              type="submit"
+              className="btn btn-primary w-100"
+              disabled={!isFormValid || isAddingBlog}
+            >
+              {isAddingBlog ? "Adding Blog..." : "Add Blog"}
             </button>
           </form>
         </div>
