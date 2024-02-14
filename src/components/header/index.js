@@ -1,92 +1,87 @@
 import React from "react";
 import withUser from "../withUser";
-import { removeToken } from "../../util/jwt";
+import { DEFAULT_USER_PROFILE, USER_STORAGE_KEY } from "../../config/constants";
 import { Link } from "react-router-dom";
-import { USER_STORAGE_KEY } from "../../config/constants";
+import { removeToken } from "../../util/jwt";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function Header({ user }) {
   const handleLogout = () => {
-    removeToken();
-    localStorage.removeItem(USER_STORAGE_KEY);
+	
   };
 
   return (
-    <div className="container-fluid p-0">
-      <div className="main_header dashboard_header">
-        <nav className="navbar navbar-expand-lg  custom-header">
-          <div className="main_header_text">
+
+
+    // 
+    <div class="container-fluid p-0">
+    <div class="main_header dashboard_header">
+        <nav class="navbar navbar-expand-lg  custom-header">
+            <div class="main_header_text">
             <Link to="/" style={{ textDecoration: "none" }}>
-              <h4>
-                Ne<span style={{ color: "#ea2d00" }}>w</span>s
-              </h4>
-              <p>Blog</p>
+                <h4>Ne<span style={{ color: "#ea2d00" }}>w</span>s</h4>
+                <p>Blog</p>
             </Link>
-          </div>
-          <button
-            className="navbar-toggler navbar_toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav navbar_nav">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about" className="nav-link">
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/contact" className="nav-link">
-                  Contact Us
-                </Link>
-              </li>
-              {user ? (
-                <>
-                  <li className="nav-item">
-                    <Link to="/addblog" className="nav-link">
-                      Add Blog
+            </div>
+            <button class="navbar-toggler navbar_toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav navbar_nav">
+                <li class="nav-item">
+                  <Link to='/' className="nav-link"> Home</Link>
+                </li>
+                <li class="nav-item">
+                <Link to='/about' className="nav-link"> About Us</Link>
+                </li>
+
+                <li class="nav-item">
+                <Link to='/contact' className="nav-link"> Contact Us</Link>
+                </li>
+                {user ? (
+                  <>
+                  <li class="nav-item">
+                  <Link to="/addblog" className="nav-link">
+                    Add Blog
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link to="/myblogs" className="nav-link">
-                      My Blogs
+                  <li class="nav-item">
+                  <Link to="/myblogs" className="nav-link">
+                    My Blogs
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <button className="btn login-btn" onClick={handleLogout}>
-                      Log Out
-                    </button>
-                  </li>
-                </>
-              ) : (
-                <div className="d-flex gap-3">
-                  <li className="nav-item">
-                    <Link to="/login">
-                      <button className="btn login-btn">Login</button>
+
+                  <li class="nav-item">
+                  <Link
+                        to="/login"                        
+                        onClick={handleLogout}
+                      >
+                    <button class="btn login-btn" onclick="redirectTo('{% url 'logout' %}')">Log Out</button>
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link to="/signup">
-                      <button className="btn register-btn">Register</button>
-                    </Link>
-                  </li>
-                </div>
-              )}
-            </ul>
-          </div>
-        </nav>
-      </div>
+                  </>
+                ) : (
+                  <div class="d-flex gap-3">
+                    <li class="nav-item">
+                    <Link to="/login" >
+                        <button class="btn login-btn" >Login</button>
+                      </Link>
+                      </li>
+                      <li class="nav-item">
+                      <Link to="/signup" >
+                        <button class="btn register-btn"  onclick="redirectTo('{% url 'signup' %}')">Register</button>
+                        </Link>
+                      </li>
+                  </div>
+                )}
+
+              </ul>
+            </div>
+          </nav>
+
     </div>
+
+  </div>
   );
 }
 
