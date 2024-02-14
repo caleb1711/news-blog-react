@@ -44,7 +44,7 @@ root.render(
                 <div className="col-lg-3 col-md-2 col-sm-4 col-12">
                     <ul className="list-unstyled">
                         <li>
-                            <a href="#" className="nav-link1">Privacy Policy</a>
+                            <a href="/privacy" className="nav-link1">Privacy Policy</a>
                         </li>
                         <li>
                             <a href="#" className="nav-link1">Terms & Conditions</a>

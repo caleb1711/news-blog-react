@@ -11,7 +11,7 @@ import BlogDetail from './components/blogdetails';
 import AddBlog from './components/blog/addblog';
 import About from './components/about';
 import Contact from './components/contact';
-
+import Privacy from './components/privacy';
 const App = () => {
   // <Link to='/reset/'>Go to Aboutpage</Link>
   return (
@@ -29,6 +29,7 @@ const App = () => {
         <Route path="/editblog/:id" element={<EditBlog />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </Router>
   );
