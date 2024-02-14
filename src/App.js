@@ -13,9 +13,9 @@ import About from './components/about';
 import Contact from './components/contact';
 import Privacy from './components/privacy';
 import TermsandConditions from './components/terms';
+import Disclaimer from './components/disclaimer';
 
 const App = () => {
-  // <Link to='/reset/'>Go to Aboutpage</Link>
   return (
     <Router>
       <Routes>
@@ -33,6 +33,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<TermsandConditions />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
       </Routes>
     </Router>
   );

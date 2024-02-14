@@ -50,7 +50,7 @@ root.render(
                             <a href="/terms" className="nav-link1">Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href="#" className="nav-link1">Disclaimer</a>
+                            <a href="/disclaimer" className="nav-link1">Disclaimer</a>
                         </li>
                     </ul>
                 </div>
