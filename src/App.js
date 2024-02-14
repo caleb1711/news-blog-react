@@ -12,6 +12,8 @@ import AddBlog from './components/blog/addblog';
 import About from './components/about';
 import Contact from './components/contact';
 import Privacy from './components/privacy';
+import TermsandConditions from './components/terms';
+
 const App = () => {
   // <Link to='/reset/'>Go to Aboutpage</Link>
   return (
@@ -30,6 +32,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<TermsandConditions />} />
       </Routes>
     </Router>
   );

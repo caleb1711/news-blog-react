@@ -47,7 +47,7 @@ root.render(
                             <a href="/privacy" className="nav-link1">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#" className="nav-link1">Terms & Conditions</a>
+                            <a href="/terms" className="nav-link1">Terms & Conditions</a>
                         </li>
                         <li>
                             <a href="#" className="nav-link1">Disclaimer</a>
