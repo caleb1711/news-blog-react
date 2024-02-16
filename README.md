@@ -99,17 +99,6 @@ Welcome to News Blog! This platform allows users to share news articles, engage 
 
 
 
-- __HEADER__
-   - The header of our blogging platform, Blogs Institute, provides users with easy navigation and essential information.
-   - Logo: Our distinctive logo is prominently displayed, representing the Blogs Institute brand. Click on it to return to the homepage from anywhere on the site.
-   - Navigation Menu: The navigation menu is organized for easy access to different sections of the platform. It includes links to the homepage, user profile, blog management, and the login/logout option. For mobile users, the menu is collapsible for a smooth browsing experience.
-   - User Account: Once you've signed in, your profile picture or avatar is displayed in the header, along with options for account settings and log out.
-
-
-- __FOOTER__
-   - Copyright Information: We respect intellectual property rights. 
- 
-   ![image](https://github.com/caleb1711/news-blog-react/assets/130179631/b4072e8d-48b1-437f-8c83-5dddd9cb06f8)
 
 
 - __Responsive__
