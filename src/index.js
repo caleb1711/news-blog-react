@@ -9,11 +9,6 @@ root.render(
   <React.StrictMode>
     <App />
     <footer className="footer">
-        {/* <div className="footerText">
-            <h1>Your Blog Journey Starts Here</h1>
-            <h3>Click here to get registered</h3>
-            <a href="/signup" className="signup-link"><h2 className="text-danger">SIGN UP</h2></a>
-        </div> */}
         <div className="black-section">
             <div className="row">
                 <div className="col-lg-6 col-md-3 col-sm-4 logo-link-col">
