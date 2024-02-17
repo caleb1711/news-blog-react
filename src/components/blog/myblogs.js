@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import client from "../../api/client";
 import { getToken, removeToken } from "../../util/jwt";
+import { USER_STORAGE_KEY } from "../../config/constants";
+
 import Header from "../header";
 
 const MyBlogs = () => {
@@ -10,8 +12,14 @@ const MyBlogs = () => {
   const [userName, setUserName] = useState("unknown");
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true); 
+  const navigate = useNavigate();
 
   useEffect(() => {
+    const userLoggedIn = localStorage.getItem(USER_STORAGE_KEY);
+
+    if (!userLoggedIn) {
+      navigate("/login");
+    }
     const fetchBlogs = async () => {
       try {
         const responseInfo = await client.get("/accounts/user/");
@@ -32,7 +40,8 @@ const MyBlogs = () => {
       }
     };
     fetchBlogs();
-  }, []);
+    
+  },[]);
 
   const deleteBlogPost = async (postId) => {
     try {
@@ -48,6 +57,8 @@ const MyBlogs = () => {
       deleteBlogPost(postId);
     }
   };
+  
+  
   return (
     <>
       <div className="container-fluid p-0">
@@ -127,6 +138,7 @@ const MyBlogs = () => {
       </div>
     </>
   );
+  
 };
 
 export default MyBlogs;

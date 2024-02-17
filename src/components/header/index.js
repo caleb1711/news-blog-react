@@ -1,13 +1,16 @@
 import React from "react";
 import withUser from "../withUser";
-import { DEFAULT_USER_PROFILE, USER_STORAGE_KEY } from "../../config/constants";
+import { USER_STORAGE_KEY , JWT_CONFIG} from "../../config/constants";
 import { Link } from "react-router-dom";
-import { removeToken } from "../../util/jwt";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import cookie from "cookiejs";
 
 function Header({ user }) {
+   
   const handleLogout = () => {
-	
+    cookie.remove(JWT_CONFIG.TOKEN_STORAGE_KEY);
+    localStorage.removeItem(USER_STORAGE_KEY);
+    
   };
 
   return (
@@ -53,10 +56,9 @@ function Header({ user }) {
 
                   <li class="nav-item">
                   <Link
-                        to="/login"                        
-                        onClick={handleLogout}
+                        to="/login"
                       >
-                    <button class="btn login-btn" onclick="redirectTo('{% url 'logout' %}')">Log Out</button>
+                    <button class="btn login-btn" onClick={handleLogout}>Log Out</button>
                     </Link>
                   </li>
                   </>
@@ -69,7 +71,7 @@ function Header({ user }) {
                       </li>
                       <li class="nav-item">
                       <Link to="/signup" >
-                        <button class="btn register-btn"  onclick="redirectTo('{% url 'signup' %}')">Register</button>
+                        <button class="btn register-btn" >Register</button>
                         </Link>
                       </li>
                   </div>

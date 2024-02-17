@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/accounts.css";
 import client from "../../api/client";
 import { getToken, removeToken } from "../../util/jwt";
+import { USER_STORAGE_KEY } from "../../config/constants";
 import Header from "../header";
 
 const AddBlog = () => {
@@ -66,6 +67,13 @@ const AddBlog = () => {
     }
   };
 
+  const userLoggedIn = localStorage.getItem(USER_STORAGE_KEY);
+
+  if (!userLoggedIn) {
+    navigate("/login");
+    return null;
+  }
+ 
   return (
     <div className="container-fluid p-0">
       <Header />
@@ -149,6 +157,7 @@ const AddBlog = () => {
       </div>
     </div>
   );
+ 
 };
 
 export default AddBlog;

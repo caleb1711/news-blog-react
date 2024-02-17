@@ -4,6 +4,7 @@ import client from "../../api/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/accounts.css";
 import { getToken, removeToken } from "../../util/jwt";
+import { USER_STORAGE_KEY } from "../../config/constants";
 import Header from "../header";
 
 const EditBlog = () => {
@@ -15,6 +16,11 @@ const EditBlog = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   useEffect(() => {
+    const userLoggedIn = localStorage.getItem(USER_STORAGE_KEY);
+
+    if (!userLoggedIn) {
+      navigate("/login");
+    }
     const fetchData = async () => {
       try {
         const response = await client.get(`/blog/${id}/`);
@@ -26,6 +32,7 @@ const EditBlog = () => {
       }
     };
     fetchData();
+    
   }, []);
 
   const handleFormSubmit = async (e) => {
@@ -49,7 +56,9 @@ const EditBlog = () => {
       console.error("Error submitting form:", error);
     }
   };
-
+  
+  
+  
   return (
     <div className="container-fluid p-0">
       <Header />
@@ -139,6 +148,7 @@ const EditBlog = () => {
       </div>
     </div>
   );
+  
 };
 
 export default EditBlog;
