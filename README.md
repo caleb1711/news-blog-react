@@ -285,6 +285,10 @@ This repository contains reusable components for implementing a header and foote
 - **README.md**: This file.
 - **.gitignore**: Specifies files and directories that are not to be committed to the git repository.
 
+## GitHub Projects
+
+We use GitHub Projects for project management and organization. You can find our project boards under the "Projects" tab on the GitHub repository page. Our boards are divided into different columns representing different stages of development, such as "To Do", "In Progress", and "Done". We use these boards to track tasks, issues, and milestones throughout the development process.
+
 
 - __FONTS__
    - Robot font is used in our website.
