@@ -30,12 +30,18 @@ The primary intent behind the creation of News Blog is to offer a comprehensive 
 
 News Blog offers a unique platform for bloggers, providing a user-friendly interface and robust features. This README aims to guide users through the setup, features, and deployment of the platform.
 
--__Home Page / All Blogs / User Stories__
+- __Home Page / All Blogs / User Stories__
 
   - User can see all of the blogs in home page after clicking on read more button user will go to the blog detail page .
   - User can leave a comment on blog in blog details page so comment will be saved in database. 
 
 ![screencapture-localhost-3000-2024-02-17-22_44_13](https://github.com/caleb1711/news-blog-react/assets/130179631/f3f312d4-4040-4c2a-94f4-c965202b72df)
+
+- __Story Details__
+
+  - User can see the details of all stories
+ 
+  ![screencapture-localhost-3000-blog-detail-20-2024-02-18-00_35_42](https://github.com/caleb1711/news-blog-react/assets/130179631/cb4985aa-0eec-4a43-902f-28956aac8b30)
 
 
 - __Signup Page__
