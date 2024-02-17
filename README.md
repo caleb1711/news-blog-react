@@ -30,7 +30,7 @@ The primary intent behind the creation of News Blog is to offer a comprehensive 
 
 News Blog offers a unique platform for bloggers, providing a user-friendly interface and robust features. This README aims to guide users through the setup, features, and deployment of the platform.
 
--__Home Page__
+-__Home Page / All Blogs / User Stories__
 
   - User can see all of the blogs in home page after clicking on read more button user will go to the blog detail page .
   - User can leave a comment on blog in blog details page so comment will be saved in database. 
